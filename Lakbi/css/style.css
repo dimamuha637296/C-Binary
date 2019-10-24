@@ -1,0 +1,667 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    background-color: #ffffff;
+    max-width: 1920px;
+    min-width: 1200px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+input, button, textarea {
+    outline: none;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/*Отмена обтекания*/
+.cfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.table {
+    display: table;
+}
+
+.tCell {
+    display: table-cell;
+}
+
+.invisLink {
+    position: relative;
+    z-index: 1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.invisLink:hover {
+    opacity: 0.7;
+}
+
+.invisLink > a {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 7;
+    overflow: hidden;
+    text-indent: 200%;
+    white-space: nowrap;
+}
+
+/*-------------------------------------------------------*/
+/*Общее у шрифтов*/
+
+h1 {
+    font-family: "Futura-Normal";
+    font-size: 60px;
+    font-weight: normal;
+    line-height: 70px;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 150px;
+    position: relative;
+    z-index: 2;
+}
+
+h2 {
+    font-family: "Proxima Nova";
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #1e1e1e;
+    position: relative;
+}
+
+h2:before {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 0px;
+    border-top: 3px solid #1e1e1e;
+    position: absolute;
+    left: 2px;
+    top: 52px;
+}
+
+h3 {
+    font-family: "Proxima Nova";
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #1e1e1e;
+    display: block;
+    position: relative;
+}
+
+h3:before {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 0px;
+    border-top: 2px solid #1e1e1e;
+    position: absolute;
+    left: 548px;
+    top: 57px;
+}
+
+.bordLink {
+    font-family: "HelveticaNeueCyr";
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1e1e1e;
+    width: 230px;
+    height: 50px;
+    border: 1px solid #1e1e1e;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.bordLink:hover {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/*---------------------------Хэдэр---------------------------*/
+header {
+    /*background-image: url(../img/jpg/headImg.jpg);*/
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*padding-top: 48px;*/
+    /*padding-bottom: 167px;*/
+    background-color: transparent;
+    margin-bottom: 10px;
+    /*box-shadow: 0px 0px 0px 500px rgba(0, 0, 0, 0.2) inset;*/
+    width: 100%;
+    max-width: 1920px;
+    height: 960px;
+    z-index: 1;
+}
+
+.slider {
+    width: 100%;
+    height: 960px;
+    display: block;
+    z-index: 2;
+    position: absolute;
+}
+
+.mainSlider {
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 2;
+    position: absolute;
+}
+
+.mainSlider .item {
+    width: 100%;
+    max-width: 1920px;
+    height: 960px;
+    box-shadow: 0px 0px 0px 500px rgba(0, 0, 0, 0.2) inset;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+}
+
+#customDots {
+    position: absolute;
+    bottom: 6%;
+    left: 47.1%;
+    z-index: 3;
+    display: inline-block;
+}
+
+#customDots button {
+    padding: 0px;
+    border: none;
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    opacity: 0.3;
+    margin: 0px 5px;
+}
+
+#customDots button:hover {
+    opacity: 1;
+}
+
+.topline {
+    margin-bottom: 374px;
+    padding-top: 48px;
+    /*height: 22px;*/
+}
+
+.topline a {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    position: relative;
+    z-index: 2;
+}
+
+.topline a:hover {
+    opacity: 0.7;
+}
+
+.topline .logo {
+    width: 65px;
+    height: 20px;
+    float: left;
+    margin-right: 134px;
+    position: relative;
+    z-index: 2;
+}
+
+.topline .logo img {
+    width: 100%;
+}
+
+.topline .menu {
+    /*padding-left: 134px;*/
+    /*padding-right: 30px;*/
+    float: left;
+    /*width: 833px;*/
+    vertical-align: bottom;
+    z-index: 2;
+}
+
+.topline .menu a {
+    font-family: "Futura-Normal";
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 32px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #ffffff;
+    display: inline-block;
+}
+
+.topline .menu a + a {
+    margin-left: 43px;
+}
+
+.topline .menu a:first-child {
+    position: relative;
+}
+
+.topline .menu a:nth-child(2) {
+    margin-left: 67px;
+}
+
+.topline .menu a:first-child:before {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-top: 5px solid #ffffff;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    left: 75px;
+    top: 50%;
+    margin-top: -3px;
+}
+
+.topline .menu input {
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 17px;
+    letter-spacing: 0.005em;
+    text-transform: capitalize;
+    background-color: transparent;
+    color: #ffffff;
+    width: 188px;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    display: inline-block;
+    margin-left: 67px;
+    padding-left: 4px;
+    position: relative;
+    z-index: 2;
+}
+
+.topline .menu input::placeholder {
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 36px;
+    letter-spacing: 0.005em;
+    text-transform: capitalize;
+    background-color: transparent;
+    color: #ffffff;
+    opacity: 0.7;
+}
+
+.topline .addMenu {
+    float: left;
+    vertical-align: bottom;
+    margin-left: 29px;
+    position: relative;
+    z-index: 2;
+}
+
+.topline .addMenu a {
+    color: #ffffff;
+    line-height: 29px;
+    display: inline-block;
+}
+
+.topline .addMenu a + a {
+    padding-left: 16px;
+}
+
+.topline .addMenu a span[class^="icon"] {
+    font-size: 12px;
+}
+
+header .bordLink {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 49px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    width: 230px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/*---------------------------Контент-------------------------*/
+.novelties {
+    background-image: url(../img/jpg/contBack1.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 10px;
+    padding-top: 392px;
+    padding-bottom: 405px;
+}
+
+.novelties .container {
+    padding-left: 56%;
+    margin: 0;
+}
+
+.novelties .bordLink {
+    line-height: 49px;
+    letter-spacing: 0.07em;
+    margin-top: 79px;
+    display: block;
+}
+
+.sale {
+    background-image: url(../img/jpg/contBack2.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 382px;
+    padding-bottom: 405px;
+}
+
+.sale .bordLink {
+    line-height: 49px;
+    letter-spacing: 0.07em;
+    margin-top: 79px;
+    display: block;
+}
+
+.ins {
+    padding-top: 75px;
+    padding-bottom: 25px;
+}
+
+.ins .container {
+    width: 100%;
+}
+
+.ins h3 {
+    margin-bottom: 60px;
+}
+
+.ins h3:before {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 0px;
+    border-top: 2px solid #1e1e1e;
+    position: absolute;
+    left: 47.35%;
+    top: 57px;
+}
+
+.ins .gallery {
+
+}
+
+.ins .item {
+    width: 294px;
+    height: 294px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    display: inline-block;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.ins .item:hover {
+    box-shadow: 0px 0px 0px 500px rgba(0, 0, 0, 0.5) inset;
+    opacity: 1;
+}
+
+.ins .item .itemHover {
+    display: none;
+}
+
+.ins .item:hover .itemHover {
+    position: absolute;
+    left: 94px;
+    top: 125px;
+    display: block;
+}
+
+.ins .item:hover .itemHover span {
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 36px;
+    color: #ffffff;
+}
+
+.ins .item:hover .itemHover span:nth-child(2) {
+    margin-right: 15px;
+}
+
+.ins .item:hover .itemHoverspan[class^="icon"] {
+
+}
+
+.sub {
+    padding-top: 75px;
+    padding-bottom: 70px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.sub h3 {
+    letter-spacing: 0.15em;
+}
+
+.sub span {
+    font-family: "HelveticaNeueCyr";
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.075em;
+    text-align: center;
+    color: #000000;
+    display: block;
+    width: 100%;
+    margin-top: 37px;
+    margin-bottom: 65px;
+}
+
+.sub .item {
+    width: 570px;
+    margin: 0 auto;
+}
+
+.sub .nameInp {
+    float: left;
+}
+
+.sub .mailInp {
+    float: right;
+}
+
+.sub form label {
+    font-family: "HelveticaNeueCyr";
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #afafaf;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.sub form input {
+    font-family: "HelveticaNeueCyr";
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 24px;
+    letter-spacing: 0.025em;
+    color: #090000;
+    /*line-height: 17px;*/
+    background-color: transparent;
+    /*color: #1e1e1e;*/
+    width: 270px;
+    border: none;
+    border-bottom: 1px solid #1e1e1e;
+    display: inline-block;
+}
+
+.sub form .bordLink {
+    display: block;
+    line-height: 49px;
+    letter-spacing: 0.07em;
+    width: 270px;
+    border: 1px solid #1e1e1e;
+    background-color: transparent;
+    margin: 37px auto 0;
+}
+
+.sub form .bordLink:hover {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.socials {
+    padding-top: 44px;
+    padding-bottom: 59px;
+}
+
+.socials span {
+    font-family: "HelveticaNeueCyr";
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    text-transform: capitalize;
+    text-align: center;
+    color: #090000;
+    display: block;
+    padding-bottom: 28px;
+}
+
+.socials .socBlock {
+    width: 378px;
+    margin: 0 auto;
+}
+
+.socials .circle {
+    display: block;
+    width: 58px;
+    height: 58px;
+    background-color: #393939;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    position: relative;
+    float: left;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.socials .circle:hover {
+    background-color: #dcdcdc;
+}
+
+.socials .circle + .circle {
+    margin-left: 22px;
+}
+
+.socials .circle span[class^="icon"] {
+    font-size: 16px;
+    color: #ffffff;
+    display: block;
+    position: absolute;
+    left: 21px;
+    top: 18px;
+
+}
+
+.socials .circle:hover span {
+    color: #1d1d1d;
+}
+
+/*---------------------------Футер---------------------------*/
+footer {
+    font-family: "HelveticaNeueCyr";
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    color: #393939;
+    background-color: #f8f8f8;
+    padding-top: 55px;
+    padding-bottom: 80px;
+}
+
+footer span {
+    display: block;
+}
+
+footer .leftFoot {
+    float: left;
+}
+
+footer .leftFoot span:last-child {
+    margin-top: 22px;
+}
+
+footer .rightFoot {
+    float: right;
+}

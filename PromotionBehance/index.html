@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeStars</title>
+	
+	<link rel="stylesheet" href="fonts/stylesheet.css">
+	<!-- <link rel="stylesheet" href="css/rangeslider.css"> -->
+	<link rel="stylesheet" href="css/ion.rangeSlider.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header>
+		<div class="wrapper">
+			<div class="top">
+				<a href="" class="logo">
+					<span class="logoImg"><span class="transSpan">Be</span>Stars</span>
+					<p class="logoText">Лучшие цены по продвижению<br>ваших работ на Behance</p>
+				</a>
+				<div class="topMenu">
+					<button menu-modal-type="1">Почему выбирают нас</button>
+					<button menu-modal-type="2">Продвижение вашего проекта</button>
+					<button menu-modal-type="3">Контакты</button>
+				</div>
+				<button class="topBtn">Написать нам</button>
+			</div>
+		</div>
+	</header>
+	<div class="content">
+		<div class="wrapper">
+			<h1>Эффективное продвижение<br>ваших работ <span class="transSpan">на Behance</span></h1>
+			<p>Выберите подходящий для вас тариф</p>
+			<div class="rates">
+				<div class="rate rateType1" rateType="1">
+					<div class="rateTop">
+						<span>30</span>
+						<span>лайков</span>
+						<span>150</span>
+						<span>просмотров</span>
+					</div>
+					<div class="rateBottom">
+						<span>Тестовый</span>
+						<span>Бесплатно</span>
+						<button>Попробовать</button>
+					</div>
+					<span class="discountItem"></span>
+				</div>
+				<div class="rate rateType2" rateType="2">
+					<div class="rateTop">
+						<span>200</span>
+						<span>лайков</span>
+						<span>1,000</span>
+						<span>просмотров</span>
+					</div>
+					<div class="rateBottom">
+						<span>Простой (3 дня)</span>
+						<span>600<span class="rouble"></span></span>
+						<button>Заказать</button>
+					</div>
+					<span class="discountItem"></span>
+				</div>
+				<div class="rate rateType3 discount" rateType="3">
+					<div class="rateTop">
+						<span>600</span>
+						<span>лайков</span>
+						<span>3,000</span>
+						<span>просмотров</span>
+					</div>
+					<div class="rateBottom">
+						<span>Стандарт (5 дней)</span>
+						<span>1,500<span class="rouble"></span></span>
+						<button>Заказать</button>
+					</div>
+					<span class="discountItem">-300</span>
+				</div>
+				<div class="rate rateType4 discount" rateType="4">
+					<div class="rateTop">
+						<span>1,500</span>
+						<span>лайков</span>
+						<span>7,500</span>
+						<span>просмотров</span>
+					</div>
+					<div class="rateBottom">
+						<span>Звезда (7 дней)</span>
+						<span>3,000<span class="rouble"></span></span>
+						<button>Заказать</button>
+					</div>
+					<span class="discountItem">-900</span>
+				</div>
+				<div class="rate rateType5" rateType="5">
+					<div class="rateTop">
+						<span>Ваши</span>
+						<span>настройки</span>
+					</div>
+					<div class="rateBottom">
+						<span>Эксперт</span>
+						<span>Выборочно</span>
+						<button>Настроить</button>
+					</div>
+					<span class="discountItem"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Модалка почты -->
+	<form class="modal modal-mail">
+		<h2>Написать нам</h2>
+		<span>Мы постараемся ответить в ближайшее время</span>
+		<input type="text" placeholder="Ваше имя">
+		<input type="email" placeholder="Ваш email">
+		<textarea placeholder="Что вас интересует?"></textarea>
+		<input type="submit">
+		<button class="modal-close" type="button"></button>
+	</form>
+
+	<!-- Модалки меню -->
+	<form class="modal modal-menu" menu-modal-type="1">
+		<h2>Почему <br>выбирают нас?</h2>
+		<p>В первую очередь — нас выбирают из-за <b>самой низкой стоимости продвижения</b> работ Behance в российском сегменте.</p>
+		<p>Кроме того, на сайте вы можете самостоятельно подобрать <b>удобный способ продвижения</b> по количеству лайков, просмотров и времени.</p>
+		<p>Также мы гарантируем вам полную анонимность при заказе любой услуги.</p>
+		<p>А еще у нас бывают акции и скидки в праздничные дни :)</p>
+		<a href="#" class="logo">
+			<span class="logoImg"><span class="transSpan">Be</span>Stars</span>
+		</a>
+		<button class="modal-close" type="button"></button>
+	</form>
+	<form class="modal modal-menu" menu-modal-type="2">
+		<h2>Продвижение <br>вашего проекта</h2>
+		<p>После заказа услуги — вам придет сообщение на email, в котором мы предоставим вам текущие показатели проекта по лайкам и просмотрам.</p>
+		<p>С этих показателей мы начинаем работу над равномерным увеличением лайков и просмотров, а после продвижения предоставляем вам показатели «До» и «После».</p>
+		<a href="#" class="logo">
+			<span class="logoImg"><span class="transSpan">Be</span>Stars</span>
+		</a>
+		<button class="modal-close" type="button"></button>
+	</form>
+	<form class="modal modal-menu" menu-modal-type="3">
+		<h2>Контакты</h2>
+		<p>Если у вас возникнут вопросы по продвижению или вы захотите продвинуть свою работу в топ Behance — можете написать нам на email:</p>
+		<a href="mailto:mail@bestars.ru">mail@bestars.ru</a>
+		<p>Наши специалисты постараются помочь вам с вопросом в течении дня.</p>
+		<a href="#" class="logo">
+			<span class="logoImg"><span class="transSpan">Be</span>Stars</span>
+		</a>
+		<button class="modal-close" type="button"></button>
+	</form>
+	
+	<!-- Модалки блоков -->
+	<form class="modal modal-rate" rateType="1">
+		<div class="modal-rate-top">
+			<span class="modal-rate-title">Тестовый</span>
+			<span>Продвижение — 1 день</span>
+			<div>
+				<div>
+					<span>30</span>
+					<span>Лайков</span>
+				</div>
+				<div>
+					<span>150</span>
+					<span>Просмотров</span>
+				</div>
+			</div>
+		</div>
+		<div class="modal-rate-bottom">
+			<span>Бесплатно!</span>
+			<input type="text" placeholder="Ваше имя">
+			<input type="email" placeholder="Ваш email">
+			<input type="text" placeholder="Ссылка на ваш Behance проект">
+			<input type="submit" value="Попробовать">
+		</div>
+		<button class="modal-close" type="button"></button>
+	</form>
+	<form class="modal modal-rate" rateType="2">
+		<div class="modal-rate-top">
+			<span class="modal-rate-title">Простой</span>
+			<span>Продвижение — 3 дня</span>
+			<div>
+				<div>
+					<span>200</span>
+					<span>Лайков</span>
+				</div>
+				<div>
+					<span>1,000</span>
+					<span>Просмотров</span>
+				</div>
+			</div>
+		</div>
+		<div class="modal-rate-bottom">
+			<span>600<span class="rouble"></span></span>
+			<input type="text" placeholder="Ваше имя">
+			<input type="email" placeholder="Ваш email">
+			<input type="text" placeholder="Ссылка на ваш Behance проект">
+			<input type="submit" value="Заказать">
+		</div>
+		<button class="modal-close" type="button"></button>
+	</form>
+	<form class="modal modal-rate" rateType="3">
+		<div class="modal-rate-top">
+			<span class="modal-rate-title">Стандарт</span>
+			<span>Продвижение — 5 дней</span>
+			<div>
+				<div>
+					<span>600</span>
+					<span>Лайков</span>
+				</div>
+				<div>
+					<span>3,000</span>
+					<span>Просмотров</span>
+				</div>
+			</div>
+		</div>
+		<div class="modal-rate-bottom">
+			<span>1,500<span class="rouble"></span></span>
+			<input type="text" placeholder="Ваше имя">
+			<input type="email" placeholder="Ваш email">
+			<input type="text" placeholder="Ссылка на ваш Behance проект">
+			<input type="submit" value="Заказать">
+		</div>
+		<button class="modal-close" type="button"></button>
+	</form>
+	<form class="modal modal-rate" rateType="4">
+		<div class="modal-rate-top">
+			<span class="modal-rate-title">Звезда</span>
+			<span>Продвижение — 7 дней</span>
+			<div>
+				<div>
+					<span>1.500</span>
+					<span>Лайков</span>
+				</div>
+				<div>
+					<span>7,500</span>
+					<span>Просмотров</span>
+				</div>
+			</div>
+		</div>
+		<div class="modal-rate-bottom">
+			<span>3,000<span class="rouble"></span></span>
+			<input type="text" placeholder="Ваше имя">
+			<input type="email" placeholder="Ваш email">
+			<input type="text" placeholder="Ссылка на ваш Behance проект">
+			<input type="submit" value="Заказать">
+		</div>
+		<button class="modal-close" type="button"></button>
+	</form>
+	<form class="modal modal-rate" rateType="5">
+		<div class="modal-rate-top">
+			<span class="modal-rate-title">Эксперт</span>
+			<span>Продвижение — N дней</span>
+			<div>
+				<div>
+					<span class="likes-span">—</span>
+					<span>Лайков</span>
+				</div>
+				<div>
+					<span class="views-span">—</span>
+					<span>Просмотров</span>
+				</div>
+			</div>
+		</div>
+		<div class="modal-rate-bottom">
+			<span class="cost">0<span class="rouble"></span></span>
+			<label for="likes">Количество лайков
+				<input type="text" class="js-range-slider likes" name="likes" id="likes" value="" data-min="200" data-max="3000"/>
+			</label>
+			<label for="views">Количество просмотров
+				<input type="text" class="js-range-slider views" name="views" id="views" value="" data-min="1000" data-max="15000"/>
+			</label>
+			<input type="text" placeholder="Ваше имя">
+			<input type="email" placeholder="Ваш email">
+			<input type="text" placeholder="Ссылка на ваш Behance проект">
+			<input type="submit" value="Заказать">
+		</div>
+		<button class="modal-close" type="button"></button>
+	</form>
+
+	<div class="overlay"></div>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<!-- <script src="js/rangeslider.js"></script> -->
+	<!-- <script src="js/rangeslider.min.js"></script> -->
+	<script src="js/ion.rangeSlider.min.js"></script>
+	<script src="js/script.js"></script>
+
+</body>
+</html>

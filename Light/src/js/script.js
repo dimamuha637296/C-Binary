@@ -89,22 +89,22 @@ $(document).ready(function () {
     // Отслеживание подменю
     function subMenuBuild() {
         if ($(window).width() < '992') {
-            $('.subMenu').removeClass('onMD');
+            $('.subMenu').removeClass('active onMD').css('display', 'none');
+            $('.subMenuLink').removeClass('active');
 
-            $('.subMenuLink').on('click', function () {
+            $('.subMenuLink').off('click').on('click', function () {
+                event.preventDefault();
                 let subMenu = $(this).siblings('.subMenu');
-                // if ( subMenu.hasClass('active') ) {
-                //     subMenu.slideUp().removeClass('active');
-                // } else {
-                //     subMenu.slideDown().addClass('active');
-                // }
                 $(this).toggleClass('active');
                 subMenu.slideToggle().toggleClass('active');
             });
         } else {
-            $('.subMenu').addClass('onMD');
+            $('.subMenu').addClass('onMD').removeClass('active').css('display', 'block');
+            $('.subMenuLink').removeClass('active');
+            $('.subMenuLink').off('click');
         }
     }
+    
     subMenuBuild();
 
     // При изменении разрешения

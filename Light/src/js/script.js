@@ -2,34 +2,6 @@
 
 $(document).ready(function () {
 
-    // Отслеживание подменю
-    function subMenuBuild() {
-        if ($(window).width() < '992') {
-            $('.subMenu').removeClass('onMD');
-
-            $('.subMenuLink').on('click', function () {
-                let subMenu = $(this).siblings('.subMenu');
-                // if ( subMenu.hasClass('active') ) {
-                //     subMenu.slideUp().removeClass('active');
-                // } else {
-                //     subMenu.slideDown().addClass('active');
-                // }
-                $(this).toggleClass('active');
-                subMenu.slideToggle().toggleClass('active');
-            });
-        } else {
-            $('.subMenu').addClass('onMD');
-        }
-    }
-    subMenuBuild();
-
-
-    // При изменении разрешения
-    $(window).on('resize', function () {
-        subMenuBuild();
-        // $('.sliderItems').slick('unslick');
-    });
-
     // Доп. новости
     $('.hiddenNewsItems').slideUp();
     $(".allNewsButton").on('click', function () {
@@ -93,6 +65,7 @@ $(document).ready(function () {
     // Слайдер
     $('.sliderItems').slick(getSliderSettings());
 
+    // Настройки слайдера
     function getSliderSettings(){
         return {
             dots: true,
@@ -112,4 +85,31 @@ $(document).ready(function () {
             ]
         };
     }
+
+    // Отслеживание подменю
+    function subMenuBuild() {
+        if ($(window).width() < '992') {
+            $('.subMenu').removeClass('onMD');
+
+            $('.subMenuLink').on('click', function () {
+                let subMenu = $(this).siblings('.subMenu');
+                // if ( subMenu.hasClass('active') ) {
+                //     subMenu.slideUp().removeClass('active');
+                // } else {
+                //     subMenu.slideDown().addClass('active');
+                // }
+                $(this).toggleClass('active');
+                subMenu.slideToggle().toggleClass('active');
+            });
+        } else {
+            $('.subMenu').addClass('onMD');
+        }
+    }
+    subMenuBuild();
+
+    // При изменении разрешения
+    $(window).on('resize', function () {
+        subMenuBuild();
+        $('.sliderItems')[0].slick.refresh();
+    });
 });

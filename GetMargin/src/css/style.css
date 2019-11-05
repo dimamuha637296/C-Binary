@@ -150,7 +150,7 @@ input:not([type="radio"]):not([type="range"]):not([type="checkbox"]) {
 
 input[type=number] {
   -moz-appearance: textfield;
-  background-image: url(../../img/svg/dolar-dark.svg);
+  background-image: url(../../build/img/svg/dolar-dark.svg);
   background-size: 16px;
   background-position: calc(100% - 16px) center;
   background-repeat: no-repeat; }
@@ -342,7 +342,7 @@ header {
       color: #1cae98; }
 
 .homeFon {
-  background-image: url("../../img/jpg/headerFone.jpg");
+  background-image: url("../../build/img/jpg/headerFone.jpg");
   background-position: center top;
   background-repeat: no-repeat;
   background-color: #1cae98;
@@ -394,7 +394,7 @@ header {
     color: #fff; }
 
 .info {
-  background-image: url("../../img/jpg/homeMap.jpg");
+  background-image: url("../../build/img/jpg/homeMap.jpg");
   background-size: cover;
   background-position: center 58%;
   background-repeat: no-repeat;
@@ -491,7 +491,7 @@ header {
     z-index: -1; }
 
 .whySelectUs {
-  background: url("../../img/jpg/homeWhyWithUs.jpg") no-repeat center/cover;
+  background: url("../../build/img/jpg/homeWhyWithUs.jpg") no-repeat center/cover;
   color: #fff;
   padding-top: 160px;
   padding-bottom: 160px; }
@@ -545,7 +545,7 @@ header {
 
 .strangeFonsTop {
   background-color: #1cae98;
-  background: url("../../img/jpg/strangeFonTop1.jpg") no-repeat center bottom/cover;
+  background: url("../../build/img/jpg/strangeFonTop1.jpg") no-repeat center bottom/cover;
   padding-top: 135px;
   padding-bottom: 200px; }
   .strangeFonsTop .blockTitle {
@@ -861,7 +861,7 @@ header {
 
 .strangeFonsBottom {
   background-color: #042540;
-  background: url("../../img/jpg/strangeFonBottom1.jpg") no-repeat center top/cover;
+  background: url("../../build/img/jpg/strangeFonBottom1.jpg") no-repeat center top/cover;
   padding-top: 188px;
   padding-bottom: 218px; }
   .strangeFonsBottom .blockTitle {
@@ -1042,7 +1042,7 @@ header {
     -moz-transition: all 0.3s;
     -o-transition: all 0.3s;
     transition: all 0.3s;
-    background-image: url(../../img/png/newsHover.png);
+    background-image: url(../../build/img/png/newsHover.png);
     opacity: 0;
     z-index: -1; }
   .news a:hover + .itemHover {
@@ -1075,8 +1075,8 @@ header {
     top: 2px; }
 
 .bottomPage {
-  /*background: url("../../img/jpg/bottomFone.jpg") no-repeat center bottom, $color4;*/
-  background-image: url("../../img/jpg/bottomFone.jpg");
+  /*background: url("../../build/img/jpg/bottomFone.jpg") no-repeat center bottom, $color4;*/
+  background-image: url("../../build/img/jpg/bottomFone.jpg");
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;

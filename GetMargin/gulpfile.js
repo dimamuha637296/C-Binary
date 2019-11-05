@@ -6,15 +6,16 @@ const uglify = require('gulp-uglify');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
-// Пока не разобрался как связать с SCSS
-const sourcemaps = require('gulp-sourcemaps');
+const babel = require('gulp-babel');
+const imagemin = require('gulp-imagemin');
+const imgCompress = require('imagemin-jpeg-recompress');
 
 const scssFiles = [
-    './src/css/scss/_values.scss',
-    './src/css/scss/_mixins.scss',
-    './src/css/scss/_container.scss',
-    './src/css/scss/_base.scss',
-    './src/css/scss/style.scss'
+    './src/scss/_values.scss',
+    './src/scss/_mixins.scss',
+    './src/scss/_container.scss',
+    './src/scss/_base.scss',
+    './src/scss/style.scss'
 ];
 
 const cssFiles = [
@@ -56,7 +57,7 @@ function styles() {
                 }))
                 // Минификация CSS
                 .pipe(cleanCSS({
-                    level: 2
+                    level: 0
                 }))
                 // Сохранение итогового файла стилей
                 .pipe(gulp.dest('./build/css'))
@@ -65,14 +66,38 @@ function styles() {
 
 function scripts() {
     return gulp.src(jsFiles)
-                // Объединение
-                .pipe(concat('script.js'))
-                // Минификация
-                .pipe(uglify({
-                    toplevel: true
-                }))
-                .pipe(gulp.dest('./build/js'))
-                .pipe(browserSync.stream());
+        // Объединение
+        .pipe(concat('script.min.js'))
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        // Минификация
+        .pipe(uglify({
+            toplevel: true
+        }))
+        .pipe(gulp.dest('./build/js'))
+        .pipe(browserSync.stream());
+}
+
+function images() {
+    return gulp.src('src/img/**/*')
+        .pipe(imagemin([
+            imgCompress({
+                loops: 6,
+                min: 70,
+                max: 80,
+                quality: 'medium'
+            }),
+            imagemin.gifsicle(),
+            imagemin.optipng(),
+            imagemin.svgo()
+        ]))
+        .pipe(gulp.dest('build/img'));
+}
+
+function fonts() {
+    return gulp.src('src/fonts/**/*')
+        .pipe(gulp.dest('build/fonts'));
 }
 
 function watch() {
@@ -80,9 +105,9 @@ function watch() {
         server: {
             baseDir: "./"
         },
-        tunnel: true
+        tunnel: false
     });
-    gulp.watch('./src/css/**/*.scss', stylesSCSS);
+    gulp.watch('./src/scss/**/*.scss', stylesSCSS);
     gulp.watch('./src/css/**/*.css', styles);
     gulp.watch('./src/js/**/*.js', scripts);
     gulp.watch('./*.html', browserSync.reload);
@@ -92,15 +117,17 @@ function clean() {
     return del(['build/*']);
 }
 
+gulp.task('fonts', fonts);
+gulp.task('images', images);
 gulp.task('stylesSCSS', stylesSCSS);
 gulp.task('styles', styles);
-gulp.task('scripts',scripts);
+gulp.task('scripts', scripts);
 gulp.task('watch', watch);
-// gulp.task('clean', clean);
-gulp.task('build', gulp.series(clean, 
-                        gulp.series(stylesSCSS,
-                            gulp.parallel(styles, scripts)
-                        )
-                    ));
+gulp.task('clean', clean);
+gulp.task('build', gulp.series(clean,
+    gulp.series(stylesSCSS,
+        gulp.parallel(styles, scripts, images, fonts)
+    )
+));
 
 gulp.task('dev', gulp.series('build', 'watch'));
